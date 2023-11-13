@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-afl-g++"
+	BuildStamp="20231113-1003-Experimental"
+	Name="parrot"
+	Generator="ctest-3.18.4"
+	CompilerName="/usr/bin/afl-g++"
+	CompilerVersion="10.2.1"
+	OSName="Linux"
+	Hostname="parrot"
+	OSRelease="6.1.0-1parrot1-amd64"
+	OSVersion="#1 SMP PREEMPT_DYNAMIC Parrot 6.1.15-1parrot1 (2023-04-25)"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="140"
+	ProcessorCacheSize="8192"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="15746"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="4298.88"
+	>
+	<Testing>
+		<StartDateTime>Nov 13 17:18 CET</StartDateTime>
+		<StartTestTime>1699892334</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 13 17:18 CET</EndDateTime>
+		<EndTestTime>1699892334</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

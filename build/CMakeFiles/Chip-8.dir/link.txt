@@ -1,0 +1,1 @@
+/usr/bin/afl-g++ -g -rdynamic CMakeFiles/Chip-8.dir/src/main.cpp.o CMakeFiles/Chip-8.dir/src/Chip8.cpp.o -o Chip-8   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib /usr/local/lib/libSDL2.so 
