@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="Linux-afl-g++"
-	BuildStamp="20231113-1003-Experimental"
+	BuildStamp="20231116-2154-Experimental"
 	Name="parrot"
 	Generator="ctest-3.18.4"
 	CompilerName="/usr/bin/afl-g++"
@@ -21,14 +21,14 @@
 	TotalVirtualMemory="0"
 	TotalPhysicalMemory="15746"
 	LogicalProcessorsPerPhysical="2"
-	ProcessorClockFrequency="3794.04"
+	ProcessorClockFrequency="4223.06"
 	>
 	<Testing>
-		<StartDateTime>Nov 13 23:31 CET</StartDateTime>
-		<StartTestTime>1699914688</StartTestTime>
+		<StartDateTime>Nov 16 22:54 CET</StartDateTime>
+		<StartTestTime>1700171697</StartTestTime>
 		<TestList/>
-		<EndDateTime>Nov 13 23:31 CET</EndDateTime>
-		<EndTestTime>1699914688</EndTestTime>
+		<EndDateTime>Nov 16 22:54 CET</EndDateTime>
+		<EndTestTime>1700171697</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

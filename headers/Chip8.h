@@ -4,7 +4,7 @@ class Chip8
 {   
     private:
     // Add member variables to represent the state of the Chip8 emulator
-    bool drawFlag = 0;
+    bool drawFlag;
     bool keyPressed;
     unsigned short opcode;
     unsigned char memory[4096]; //Ram
@@ -17,7 +17,7 @@ class Chip8
     unsigned short stack[16];
     unsigned short sp;   // Stack pointer
     bool key[16]; // Keypad
-    unsigned char font[80] =
+    const unsigned char font[80] =
     {
         0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
         0x20, 0x60, 0x20, 0x20, 0x70, // 1
@@ -38,27 +38,7 @@ class Chip8
     };
 
     public:
-        /*
-        void setOpcode(unsigned short opcode);
-        void setMemory(int index, unsigned char value);
-        void setRegisters(int index, unsigned char value);
-        void setIRegister(unsigned char value);
-        void setPc(unsigned char value);
-        void setDelay_timer(unsigned char value);
-        void setSound_timer(unsigned char value);
-        void setStack(int index, unsigned short value);
-        void setSp(unsigned short value);
 
-        unsigned short getOpcode();
-        unsigned char getMemory(int index);
-        unsigned char getRegisters(int index);
-        unsigned char getIRegister();
-        unsigned char getPc();
-        unsigned char getDelay_timer();
-        unsigned char getSound_timer();
-        unsigned short getStack(int index);
-        unsigned short getSp();
-        */
         unsigned char* getGfx();
         bool getDrawFlag();
 

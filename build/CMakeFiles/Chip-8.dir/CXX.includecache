@@ -25,10 +25,8 @@ fstream
 -
 string
 -
-
-/home/xd/Desktop/repos/Chip-8/src/Chip8.cpp
-Chip8.h
-/home/xd/Desktop/repos/Chip-8/src/Chip8.h
+iomanip
+-
 
 /home/xd/Desktop/repos/Chip-8/src/main.cpp
 includes.h

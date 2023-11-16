@@ -28,9 +28,9 @@ void Draw(unsigned char* graphicsArray)
     //Scae factor for pixels
     const int pixelSize = SCREEN_HEIGHT / CHIP8_HEIGHT;
 
-    SDL_SetRenderDrawColor(Renderer, 0, 0, 0, 0);
+    SDL_SetRenderDrawColor(Renderer, 0, 0, 0, 255);
     SDL_RenderClear(Renderer);
-    SDL_SetRenderDrawColor(Renderer, 255, 255, 255, 255);
+    SDL_SetRenderDrawColor(Renderer, 0, 255, 0, 255);
     for (int y = 0; y < CHIP8_HEIGHT; ++y)
     {
         for (int x = 0; x < CHIP8_WIDTH; ++x)
@@ -56,7 +56,7 @@ int main(int, char**){
 
     initializeSDL();
     myChip8.initMem();
-    myChip8.loadGame("/home/xd/Desktop/repos/Chip-8/data/chip8-roms-master/games/Space Invaders [David Winter].ch8");
+    myChip8.loadGame("/home/xd/Desktop/repos/Chip-8/data/INVADERS");
     while(!quitFlag)
     {
         myChip8.emulateCycle();
@@ -119,7 +119,7 @@ int main(int, char**){
                 break;
             }
         }
-        std::this_thread::sleep_for(std::chrono::microseconds(1200));
+        std::this_thread::sleep_for(std::chrono::microseconds(1850));
     }
     SDL_Init(SDL_INIT_EVERYTHING);
     SDL_Quit();
