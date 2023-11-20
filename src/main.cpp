@@ -3,33 +3,38 @@
 
 Chip8 myChip8;
 
+//Chip-8 variables
 const int SCREEN_WIDTH = 1024, SCREEN_HEIGHT = 512, CHIP8_WIDTH = 64, CHIP8_HEIGHT = 32;
 const int PIXEL_SIZE = SCREEN_WIDTH / CHIP8_WIDTH;
 unsigned char* graphicsArray;
 bool quitFlag = false;
+std::string romPath;
 
 SDL_Window* Window = nullptr;
 SDL_Renderer* Renderer = nullptr;
-//SDL_Texture* Texture = nullptr;
 
+//Initialize SDL2
 void initializeSDL() {
     SDL_Init(SDL_INIT_VIDEO);
 
     Window = SDL_CreateWindow("Chip-8 Emulator", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     Renderer = SDL_CreateRenderer(Window, -1, SDL_RENDERER_ACCELERATED);
-    //Texture = SDL_CreateTexture(Renderer, SDL_PIXELFORMAT_RGB24, SDL_TEXTUREACCESS_STREAMING, CHIP8_WIDTH, CHIP8_HEIGHT);
 
     SDL_SetRenderDrawColor(Renderer, 0, 0, 0, 255);
     SDL_RenderClear(Renderer);
     SDL_RenderPresent(Renderer);
 }
+
+//Draw to screen method
 void Draw(unsigned char* graphicsArray)
 {
     //Scae factor for pixels
     const int pixelSize = SCREEN_HEIGHT / CHIP8_HEIGHT;
 
+    //Background color
     SDL_SetRenderDrawColor(Renderer, 0, 0, 0, 255);
     SDL_RenderClear(Renderer);
+    //Pixel color
     SDL_SetRenderDrawColor(Renderer, 0, 255, 0, 255);
     for (int y = 0; y < CHIP8_HEIGHT; ++y)
     {
@@ -48,25 +53,35 @@ void Draw(unsigned char* graphicsArray)
         }
     }
     SDL_RenderPresent(Renderer);
-    //SDL_Delay(5);
 }
 
 
 int main(int, char**){
 
+    //Prompt the user for rom path, it has to be absolute
+    std::cout << "Full rom path: \n";
+    std::cin >> romPath;
+
+    //Prepare SDL2 and Chip-8 state
     initializeSDL();
     myChip8.initMem();
-    myChip8.loadGame("/home/xd/Desktop/repos/Chip-8/data/INVADERS");
+
+    //Load game
+    myChip8.loadRom(romPath);
+
+    //Start emulation cycle
     while(!quitFlag)
     {
         myChip8.emulateCycle();
 
+        //Draw if drawflag is set
         if(myChip8.getDrawFlag() == 1)
         {
             graphicsArray = myChip8.getGfx();
             Draw(graphicsArray);
         }
 
+        //Get key state and update key array
         SDL_Event event;
         while (SDL_PollEvent(&event))
         {
@@ -119,6 +134,7 @@ int main(int, char**){
                 break;
             }
         }
+        //Sleep to slow emulation sleep
         std::this_thread::sleep_for(std::chrono::microseconds(1850));
     }
     SDL_Init(SDL_INIT_EVERYTHING);

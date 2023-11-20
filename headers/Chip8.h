@@ -6,7 +6,7 @@ class Chip8
     // Add member variables to represent the state of the Chip8 emulator
     bool drawFlag;
     bool keyPressed;
-    unsigned short opcode;
+    unsigned short opcode; //Opcode
     unsigned char memory[4096]; //Ram
     unsigned char V[16]; // General purpose registers
     unsigned short I;    // Index register
@@ -45,7 +45,7 @@ class Chip8
         void setKey(int index, bool value);
 
         void initMem();
-        void loadGame(std::string gamePath);
+        void loadRom(std::string gamePath);
         void emulateCycle();
 
 };

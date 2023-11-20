@@ -1,6 +1,7 @@
 #include "Chip8.h"
 void Chip8::initMem()
 {
+    //Init hardware state
     keyPressed = false;
     drawFlag = false;
     delay_timer = 0;
@@ -10,7 +11,7 @@ void Chip8::initMem()
     I = 0;
     opcode = 0;
 
-    //Clear stack
+    //Clear stack and ram
     std::fill_n(stack, 16, 0);
     std::fill_n(memory, 2048, 0);
 
@@ -22,7 +23,7 @@ void Chip8::initMem()
 
 };
 
-void Chip8::loadGame(std::string gamePath)
+void Chip8::loadRom(std::string gamePath)
 {
     std::ifstream inputFile(gamePath, std::ios::binary);
     if(inputFile.is_open())
@@ -169,12 +170,6 @@ void Chip8::emulateCycle()
                     V[0xF] = carry; 
 
                 }
-                break;
-
-
-
-                default:
-                    std::cout << "Unknowm opcode 0x8FFF\n";
                 break;
                 
             }
