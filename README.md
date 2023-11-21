@@ -38,10 +38,10 @@ Run the emulator and specify the full path of a compatible ROM(Included [Zophar'
 ## Screenshots
 
 ### Space Invaders
-![Screenshot from 2023-11-21 13-16-30](https://github.com/pablodrake/Chip-8/assets/31321612/a1857e16-892c-4078-b1b9-f7630f5ed7d0)
-![Screenshot from 2023-11-21 13-16-49](https://github.com/pablodrake/Chip-8/assets/31321612/bf6691f3-8496-4157-8667-5b35f36aacd5)
-
+![Screenshot from 2023-11-21 13-16-30](https://github.com/pablodrake/Chip-8/assets/31321612/3553cc1d-33aa-4ddb-a71e-02eb9cb4428d)
+![Screenshot from 2023-11-21 13-16-49](https://github.com/pablodrake/Chip-8/assets/31321612/4902618d-0173-412e-a190-8d8e3ccb4930)
 ### Kaleid
-![Screenshot from 2023-11-21 13-14-58](https://github.com/pablodrake/Chip-8/assets/31321612/7137ac2c-cc62-4dc6-8e2a-37b630e7dae0)
+![Screenshot from 2023-11-21 13-14-58](https://github.com/pablodrake/Chip-8/assets/31321612/b2ae51a6-aa1c-4ed7-b187-29e5f3908925)
+
 
 
